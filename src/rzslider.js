@@ -514,8 +514,8 @@
         },
 
         /*
-       * Reflow the slider when the low handle changes (called with throttle)
-       */
+         * Reflow the slider when the low handle changes (called with throttle)
+         */
         onLowHandleChange: function() {
           this.syncLowValue()
           if (this.range) this.syncHighValue()
@@ -530,8 +530,8 @@
         },
 
         /*
-       * Reflow the slider when the high handle changes (called with throttle)
-       */
+         * Reflow the slider when the high handle changes (called with throttle)
+         */
         onHighHandleChange: function() {
           this.syncLowValue()
           this.syncHighValue()
@@ -1414,8 +1414,8 @@
                   ? 'bottom'
                   : 'top'
                 : reversed
-                  ? 'left'
-                  : 'right'
+                ? 'left'
+                : 'right'
             this.scope.barStyle = {
               backgroundImage:
                 'linear-gradient(to ' +
@@ -2651,6 +2651,7 @@
       return {
         restrict: 'AE',
         replace: true,
+        transclude: true,
         scope: {
           rzSliderModel: '=?',
           rzSliderHigh: '=?',
